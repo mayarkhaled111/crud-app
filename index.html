@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container w-75 ms-auto mt-5">
+        <form class="shadow p-5">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="productName" placeholder="" oninput="validation(this)">
+                <div class="alert alert-danger d-none"><small>start with capital letter</small></div>
+                <label for="productName">product Name:</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="productPrice" placeholder="" oninput="validation(this)">
+                <div class="alert alert-danger d-none"><small>it should be 3 numbers</small></div>
+                <label for="productPrice">product Price:</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" list="datalistOptions" id="productCat" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option value="tvs">
+                    <option value="pcs">
+                    <option value="toys">
+                    <option value="mobiles">
+                    <option value="camera">
+                </datalist>
+                <label for="productCat">product Cat:</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea type="text" class="form-control" id="productDesc" placeholder="" oninput="validation(this)"></textarea>
+                <div class="alert alert-danger d-none"><small>you should write more than 40 words</small></div>
+                <label for="productDesc">product Desc:</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="file" class="form-control" id="productImg" placeholder=""">
+                <div class="alert alert-danger d-none"><small>you should select image</small></div>
+                <label for="productDesc">product image:</label>
+            </div>
+            <button class="btn btn-info text-light px-5 d-block ms-auto" type="button" id="addBtn">Add Product</button>
+            <button class="btn btn-warning px-5 d-none d-block ms-auto" type="button" id="updateBtn">update Product</button>
+        </form>
+        <input class="form-control mt-5 shadow" type="text" placeholder="Search By Name....." id="productSearch">
+        <div class="row g-3 mt-3" id="row">
+        </div>
+        
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

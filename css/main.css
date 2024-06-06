@@ -1,0 +1,10 @@
+body{
+    background-image: url(../image/background.avif);
+    background-position: center;
+    background-size: cover;
+}
+img{
+    height: 250px;
+    object-fit: cover;
+}
+
